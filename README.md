@@ -1,68 +1,109 @@
-# Email Sender App
+# Email Sender App 📧
 
-A simple RESTful API built with Spring Boot that allows developers to send emails via a simple HTTP POST request.
+![Project Screenshot](https://via.placeholder.com/800x400.png?text=Add+Your+Screenshot+Here)
+
+A full-stack application featuring a user-friendly React frontend and a robust Spring Boot backend. This app provides a simple and elegant interface to compose and send emails directly from your browser, powered by a RESTful API.
+
+---
 
 ## ✨ Features
 
-* Send email to a single recipient.
-* Simple JSON-based request body.
-* Easy to configure for any SMTP server (e.g., Gmail, SendGrid).
+* **Modern UI:** A clean and responsive user interface built with React.
+* **Powerful Backend:** A secure and efficient REST API built with Spring Boot.
+* **Simple Emailing:** Send emails to any recipient with a subject and message body.
+* **Easy Configuration:** Configure your SMTP server details in a single properties file.
 
-## 🛠️ Technologies Used
+---
 
-* Java 17
-* Spring Boot 3
-* Maven
-* Spring Mail
+## 🛠️ Tech Stack
+
+| Frontend          | Backend         |
+| ----------------- | --------------- |
+| ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white)         | ![Java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white)           |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) | ![Spring](https://img.shields.io/badge/-Spring-6DB33F?logo=spring&logoColor=white)       |
+| ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)         | ![Maven](https://img.shields.io/badge/-Maven-C71A36?logo=apache-maven&logoColor=white)       |
+| ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white)           |                 |
+
+---
 
 ## 🚀 Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+Follow these instructions to get a local copy of the project up and running.
 
 ### Prerequisites
 
-You will need the following software installed:
+Ensure you have the following software installed on your machine:
 * Java Development Kit (JDK) 17 or higher
 * Apache Maven
+* Node.js and npm
 
-### Installation
+### Installation & Setup
 
-1.  **Clone the repository**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/vtaunk1932/EmailSenderApp.git](https://github.com/vtaunk1932/EmailSenderApp.git)
-    ```
-2.  **Navigate to the project directory**
-    ```bash
     cd EmailSenderApp
     ```
-3.  **Configure your email credentials**
-    Open `src/main/resources/application.properties` and add your SMTP server details and credentials.
-    ```properties
-    spring.mail.host=smtp.gmail.com
-    spring.mail.port=587
-    spring.mail.username=your-email@gmail.com
-    spring.mail.password=your-app-password # Use an App Password for Gmail
-    spring.mail.properties.mail.smtp.auth=true
-    spring.mail.properties.mail.smtp.starttls.enable=true
-    ```
-4.  **Run the application**
+
+2.  **Backend Setup (Terminal 1):**
     ```bash
+    # Navigate to the backend directory
+    # (Assuming it's named 'emailsenderapp', change if necessary)
+    cd emailsenderapp
+
+    # Configure your email credentials in `src/main/resources/application.properties`
+    # You MUST add your SMTP server details (host, username, password) here.
+
+    # Run the backend server
     mvn spring-boot:run
     ```
-The server will start on `http://localhost:8080`.
+    The backend API will now be running on `http://localhost:8080`.
+
+3.  **Frontend Setup (Terminal 2):**
+    Open a **new terminal window** for this step.
+    ```bash
+    # Navigate to the frontend directory
+    # (Assuming it's named 'frontend', change if necessary)
+    cd path/to/your/frontend
+
+    # Install dependencies
+    npm install
+
+    # Run the React application
+    npm start
+    ```
+    The frontend will automatically open in your browser at `http://localhost:3000`.
+
+---
 
 ## ⚙️ Usage
 
-Send a `POST` request to `/api/email/send` with a JSON body containing the `to`, `subject`, and `message`.
+Once both the backend and frontend are running, you can use the application:
 
-### Example Request using cURL
+1.  Open your web browser and go to `http://localhost:3000`.
+2.  Fill out the recipient's email, subject, and message in the form.
+3.  Click the "Send Email" button.
 
-```bash
-curl -X POST \
-  http://localhost:8080/api/email/send \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "to": "recipient@example.com",
-    "subject": "Greetings!",
-    "message": "This is a test email sent from the Spring Boot application."
-  }'
+You will receive a notification indicating whether the email was sent successfully.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/vtaunk1932/EmailSenderApp/issues).
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact
+
+**[Your Name]**
+
+* **GitHub:** [@vtaunk1932](https://github.com/vtaunk1932)
+* **LinkedIn:** [linkedin.com/in/your-linkedin-profile](https://linkedin.com/in/your-linkedin-profile)
+* **Email:** [your-email@example.com](mailto:your-email@example.com)
