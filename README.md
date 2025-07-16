@@ -1,6 +1,7 @@
 # Email Sender App 📧
 
-![Project Screenshot](https://via.placeholder.com/800x400.png?text=Add+Your+Screenshot+Here)
+![Project Screenshot]<img width="938" height="1012" alt="image" src="https://github.com/user-attachments/assets/0c8857dd-6f5d-47c3-b66a-d51ad6b5be03" />
+
 
 A full-stack application featuring a user-friendly React frontend and a robust Spring Boot backend. This app provides a simple and elegant interface to compose and send emails directly from your browser, powered by a RESTful API.
 
